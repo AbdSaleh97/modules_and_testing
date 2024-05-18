@@ -1,4 +1,14 @@
 def factorial_iterative(n):
+    """
+    Calculate the factorial of a non-negative integer n using iterative method.
+    
+    Args:
+        n (int): The non-negative integer for which factorial is to be calculated.
+        
+    Returns:
+        int: The factorial of n.
+        str: "enter positive value" if n is less than 1.
+    """
     res = 1
     if n == 1:
         return 1
@@ -9,6 +19,16 @@ def factorial_iterative(n):
     return res
 
 def factorial_rcursioun(n):
+    """
+    Calculate the factorial of a non-negative integer n using recursive method.
+    
+    Args:
+        n (int): The non-negative integer for which factorial is to be calculated.
+        
+    Returns:
+        int: The factorial of n.
+        str: "Enter positive value" if n is less than 1.
+    """
     if n < 1:
         return "Enter positive value"
     if n == 1:
@@ -17,6 +37,22 @@ def factorial_rcursioun(n):
         return factorial_rcursioun(n-1) * n
     
 def clumsy(n):
+    """
+    Calculate the clumsy factorial of a non-negative integer n.
+    
+    Clumsy factorial is calculated as follows:
+    For integers from n to 1, perform the following operations cyclically:
+    - Multiply for the first operation
+    - Divide for the second operation
+    - Add for the third operation
+    - Subtract for the fourth operation
+    
+    Args:
+        n (int): The non-negative integer for which clumsy factorial is to be calculated.
+        
+    Returns:
+        int: The clumsy factorial of n.
+    """
     if n == 1:
         return 1
     stack = [n]
@@ -39,4 +75,15 @@ def clumsy(n):
         current_op = (current_op + 1) % 4
     return sum(stack)
 
-print(clumsy(13))
+
+class test:
+    """
+    A simple class for demonstration purposes.
+    """
+    variable = "blah"
+    
+    def call(self):
+        """
+        Print the value of the variable.
+        """
+        print(self.variable)
